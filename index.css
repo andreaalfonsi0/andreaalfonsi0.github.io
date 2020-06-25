@@ -1,4 +1,39 @@
-html, body{
+@font-face {
+  font-family: 'Alata-Regular';
+  src: url('/fonts/Alata-Regular.svg#Alata-Regular') format('svg'),
+    url('/fonts/Alata-Regular.ttf') format('truetype'),
+    url('/fonts/Alata-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'alata-regular';
+  src: url('/fonts/alata-regular.eot');
+  src: url('/fonts/alata-regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/alata-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  user-select: none;
+  border: solid 1px gray;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+}
+
+.wireframe {
+  background:
+    linear-gradient(to top right,
+      transparent calc(50% - 1px), gray calc(50% - 1px),
+      gray calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom right,
+      transparent calc(50% - 1px), gray calc(50% - 1px),
+      gray calc(50% + 1px), transparent calc(50% + 1px));
 }
