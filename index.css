@@ -18,17 +18,161 @@
 
 * {
   user-select: none;
-  border: solid 1px gray;
-  box-sizing: border-box;
-  margin: 0 auto;
+}
+
+:root {
+  --background-color: white;
+  --text-primary-color: black;
+  --text-secondary-color: grey;
+  --cta-background-color: red;
+  --cta-text-color: white;
+}
+
+html{
+  background: var(--background-color);
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'alata-regular', sans-serif;
+  color: var(--text-primary-color);
 }
 
-.wireframe {
+.cookies {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--background-color);
+  padding: 8px;
+}
+
+.main {
+  margin: 2px auto 0;
+  padding: 8px;
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.main>.text {
+  width: 50%;
+  margin: auto 0;
+}
+
+.main>.decoration {
+  width: 50%;
+  text-align: center;
+}
+
+.title {
+  display: block;
+  font-size: 4rem;
+  padding: 8px;
+  margin: 0;
+  color: var(--text-primary-color);
+}
+
+.subtitle {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 2.5rem;
+  padding: 8px;
+  color: var(--text-secondary-color);
+}
+
+.user-trip {
+}
+
+.user-trip {
+  display: block;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.user-trip >  section:nth-child(even) {
+  position: relative;
+  left: 0;
+  width: 100%;
+  width: 50%;
+  margin: 0 auto 0 0;
+}
+
+.user-trip > section:nth-child(odd) {
+  position: relative;
+  right: 0;
+  width: 100%;
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+
+.rigth-container{
+}
+
+.section-title{
+  font-size: 3rem;
+  color: var(--text-primary-color);
+}
+
+.unordered-list{
+  list-style-type: none;
+  padding: 0;
+}
+
+.unordered-list > li {
+  padding: 4px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.highlight{
+  /* background-color: var(--background-color); */
+}
+
+
+svg {
+  z-index: -1;
+}
+
+button{
+  border: none;
+  padding: 16px 24px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.cta{
+  background: var(--cta-background-color);
+  color: var(--cta-text-color);
+}
+
+#paper-trajectory {
+  stroke-dasharray: 669;
+  stroke-dashoffset: 3305;
+  animation: move 1s linear reverse;
+}
+
+#dashed-plane-path {
+  stroke-dasharray: 10;
+}
+
+@keyframes move {
+  from {
+    stroke-dashoffset: 850;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* USE FOR DEBUG PURPOSE */
+.wireframe:hover {
+  border: solid 2px grey;
   background:
     linear-gradient(to top right,
       transparent calc(50% - 1px), gray calc(50% - 1px),
@@ -36,4 +180,8 @@ html, body {
     linear-gradient(to bottom right,
       transparent calc(50% - 1px), gray calc(50% - 1px),
       gray calc(50% + 1px), transparent calc(50% + 1px));
+}
+
+.hidden {
+  display: none;
 }
