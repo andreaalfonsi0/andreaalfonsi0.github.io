@@ -26,6 +26,7 @@
   --text-secondary-color: grey;
   --cta-background-color: red;
   --cta-text-color: white;
+  --paper-trajectory-color: #ddd;
 }
 
 html{
@@ -108,12 +109,27 @@ html, body {
   margin: 0 0 0 auto;
 }
 
-.rigth-container{
+.user-trip > section:last-child{
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.user-trip > section > a{
+  display: block;
+  text-decoration: none;
+  color: var(--text-secondary-color);
+  padding: 4px 0;
 }
 
 .section-title{
   font-size: 3rem;
   color: var(--text-primary-color);
+  text-align: center;
+  width: 100%;
+}
+
+.user-trip > section{
+  font-size: 1.5rem;
 }
 
 .unordered-list{
@@ -123,12 +139,13 @@ html, body {
 
 .unordered-list > li {
   padding: 4px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 5px;
+  border-bottom: solid 1px var(--paper-trajectory-color);
 }
 
-.highlight{
-  /* background-color: var(--background-color); */
+.unordered-list > li:last-child{
+  /* border-bottom: none; */
 }
 
 
@@ -142,31 +159,43 @@ button{
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
+  background: var(--background-color);
 
 }
 
 .cta{
   background: var(--cta-background-color);
   color: var(--cta-text-color);
+  width: 100%;
+}
+
+.example-button{
+  width: 100%;
 }
 
 #paper-trajectory {
-  stroke-dasharray: 669;
-  stroke-dashoffset: 3305;
-  animation: move 1s linear reverse;
+  /* stroke-dasharray: 669; */
+  /* stroke-dashoffset: 3305; */
+  /* animation: move 10s linear reverse; */
 }
 
 #dashed-plane-path {
   stroke-dasharray: 10;
 }
 
-@keyframes move {
-  from {
-    stroke-dashoffset: 850;
-  }
+footer{
+  text-align: center;
+  width: 100%;
+  padding: 16px 0;
+  border-top: solid 1px #eee;
+  margin-top: 16px;
+}
 
-  to {
-    stroke-dashoffset: 0;
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from{
+
   }
 }
 
